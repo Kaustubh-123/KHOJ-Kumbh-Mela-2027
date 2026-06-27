@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ML model binaries (large, reproducible by running ensure_trained)
+kho-ya-paya/models/*.pkl
+
+# Streamlit
+.streamlit/
+
+# Node / Next.js
+node_modules/
+.next/
+frontend/.next/
+frontend/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets / env
+.env
+.env.local
+*.env
+
+# SQLite databases (auto-created at runtime)
+*.db
+*.sqlite
+
+# Runtime temp files
+kho-ya-paya/data/telegram_reports.jsonl
+backend/runtime/

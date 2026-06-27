@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHOJ - Pitch Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.16/framer-motion.js"></script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #020617; /* slate-950 */
+            color: white;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .slide {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px);
+            pointer-events: none;
+            padding: 4rem;
+        }
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, #ffffff0a 1px, transparent 1px), linear-gradient(to bottom, #ffffff0a 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, #000 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, #000 40%, transparent 100%);
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-btn {
+            position: fixed;
+            bottom: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 50;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        .prev-btn { right: 6rem; }
+        .next-btn { right: 2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <!-- Slide 1: Title -->
+    <div class="slide active" id="slide-0">
+        <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none translate-x-1/2 translate-y-1/2"></div>
+        
+        <h2 class="text-3xl font-bold tracking-[0.3em] text-red-500 mb-6 uppercase">Team 21 Presents</h2>
+        <h1 class="text-[8rem] font-black tracking-tighter leading-none mb-6">KHOJ</h1>
+        <p class="text-4xl font-light text-slate-300 max-w-4xl text-center">
+            AI-Powered Emergency Triage & Missing Person Network for Kumbh Mela 2027
+        </p>
+    </div>
+
+    <!-- Slide 2: The Problem -->
+    <div class="slide" id="slide-1">
+        <div class="w-full max-w-6xl">
+            <h2 class="text-5xl font-black mb-12 text-slate-100 flex items-center gap-4">
+                <span class="w-4 h-12 bg-red-500 rounded-full"></span> The Challenge
+            </h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="glass-card p-10 flex flex-col justify-center">
+                    <h3 class="text-8xl font-black text-red-500 mb-4 text-gradient bg-gradient-to-br from-red-400 to-rose-700">100M+</h3>
+                    <p class="text-3xl font-semibold text-white">Pilgrims Gathered</p>
+                    <p class="text-xl text-slate-400 mt-4">The largest human gathering on Earth. When a child goes missing, traditional police reporting is too slow and centralized.</p>
+                </div>
+                <div class="grid grid-rows-2 gap-8">
+                    <div class="glass-card p-8 flex items-center gap-6 border-l-4 border-l-orange-500">
+                        <div class="text-orange-500 text-5xl">⚠️</div>
+                        <div>
+                            <h4 class="text-2xl font-bold">Facial Recognition Fails</h4>
+                            <p class="text-slate-400 mt-2">Extreme occlusions, poor angles, and processing millions of faces is impossible in real-time.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 flex items-center gap-6 border-l-4 border-l-purple-500">
+                        <div class="text-purple-500 text-5xl">🔒</div>
+                        <div>
+                            <h4 class="text-2xl font-bold">Privacy Concerns</h4>
+                            <p class="text-slate-400 mt-2">Mass surveillance of biometric data violates fundamental privacy rights of attendees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: The Solution -->
+    <div class="slide" id="slide-2">
+        <div class="w-full max-w-6xl">
+            <h2 class="text-5xl font-black mb-12 text-slate-100 flex items-center gap-4">
+                <span class="w-4 h-12 bg-blue-500 rounded-full"></span> The Solution: Edge Nodes
+            </h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="glass-card p-8 text-center border-t-4 border-t-blue-500 hover:scale-105 transition-transform">
+                    <div class="w-20 h-20 bg-blue-500/20 rounded-2xl mx-auto flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Interactive Kiosks</h3>
+                    <p class="text-slate-400">Lightning-fast wizard UI designed to lower cognitive load for panicked parents reporting missing children.</p>
+                </div>
+                <div class="glass-card p-8 text-center border-t-4 border-t-purple-500 hover:scale-105 transition-transform">
+                    <div class="w-20 h-20 bg-purple-500/20 rounded-2xl mx-auto flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Passive Vector Search</h3>
+                    <p class="text-slate-400">Cameras extract clothing color vectors and transit metadata—completely ignoring biometric facial data.</p>
+                </div>
+                <div class="glass-card p-8 text-center border-t-4 border-t-green-500 hover:scale-105 transition-transform">
+                    <div class="w-20 h-20 bg-green-500/20 rounded-2xl mx-auto flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724a1 1 0 01-.553-.894V4.224a1 1 0 011.447-.894L10 6.118l5.447-2.724a1 1 0 011.447.894v13.553a1 1 0 01-.553.894L15 20m-6 0l-4-2m4 2V6m0 14l5-2m0 0l4 2m-4-2V6"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Real Data Integration</h3>
+                    <p class="text-slate-400">Integrated directly with Nashik KML datasets to route police units instantly via Haversine distances.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Demo Time -->
+    <div class="slide" id="slide-3">
+        <h2 class="text-[6rem] font-black mb-8 text-gradient bg-gradient-to-r from-emerald-400 to-cyan-500">Live Demo</h2>
+        <p class="text-3xl text-slate-400 mb-12">Let's see KHOJ in action.</p>
+        
+        <div class="glass-card px-10 py-6 border border-emerald-500/30 bg-emerald-500/10">
+            <p class="text-xl text-emerald-300 font-mono">http://localhost:3000</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <button class="nav-btn prev-btn" onclick="prevSlide()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+    </button>
+    <button class="nav-btn next-btn" onclick="nextSlide()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function updateSlides() {
+            document.querySelectorAll('.slide').forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) currentSlide++;
+            updateSlides();
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) currentSlide--;
+            updateSlides();
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
