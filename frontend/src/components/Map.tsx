@@ -23,8 +23,8 @@ interface NearbyFeature {
   id: string;
   name: string;
   distance_m: number;
-  latitude: float;
-  longitude: float;
+  latitude: number;
+  longitude: number;
   properties: Record<string, any>;
 }
 

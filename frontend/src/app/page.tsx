@@ -13,7 +13,7 @@ import Link from "next/link";
 import Webcam from "react-webcam";
 
 // Animation variants
-const pageVariants = {
+const pageVariants: any = {
   initial: { opacity: 0, scale: 0.95, y: 20 },
   in: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 30 } },
   out: { opacity: 0, scale: 1.05, y: -20, transition: { duration: 0.2 } }
@@ -164,6 +164,25 @@ export default function KioskPage() {
   const clearDatabase = () => {
     localStorage.removeItem('khoj_lost_person');
     alert("Database cleared! Ready for new demo.");
+  };
+
+  const handleFindCase = () => {
+    setStep(5);
+    setLoading(true);
+    setTimeout(() => {
+      setResult({
+        case_id: searchInput || "KHOJ-12345",
+        priority_level: "Search Active",
+        priority_zone: "All Zones",
+        nearest_police: "Notifying all nearby units",
+        action_items: [
+          `Searching database for ${searchInput || "the subject"}`,
+          "CCTV scan in progress",
+          "Please wait for updates"
+        ]
+      });
+      setLoading(false);
+    }, 1500);
   };
 
   return (
