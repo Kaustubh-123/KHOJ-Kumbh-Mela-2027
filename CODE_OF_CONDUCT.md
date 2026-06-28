@@ -47,4 +47,4 @@ or harmful.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-khoj-maintainers@example.com.
+kaustubhkhadge@gmail.com
