@@ -29,6 +29,18 @@ Our Edge Nodes serve a dual purpose:
 
 When a report is filed, KHOJ instantly cross-references the missing person's metadata vectors against our decentralized capture network, calculating geospatial probabilities to deploy emergency services directly to the most likely chokepoint.
 
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    A[Panicked Reporter] -->|Uses Wizard UI| B(Next.js Edge Kiosk)
+    C[Passive Crowds] -->|Camera Feed| B
+    B -->|Metadata Extractor| D{Local Edge Processing}
+    D -->|Clothing Vectors| E[(Decentralized Kiosk Network)]
+    E -->|Haversine Match| F[FastAPI Backend]
+    F -->|Geospatial Probabilities| G[Deploy Emergency Services]
+```
+
 ## ✨ Key Features
 
 - **Privacy-First AI Scanning**: KHOJ relies on clothing vectorization instead of facial recognition, preserving the privacy of the millions of pilgrims.
