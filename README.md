@@ -1,10 +1,13 @@
 <div align="center">
 
 # 🚨 KHOJ
-**AI-Powered Emergency Triage & Missing Person Network**
-*Designed for extreme-density crowds (Nashik Kumbh Mela 2027)*
+**Open-Source Edge-AI Crisis Triage & Decentralized Missing Persons Framework**
+*Built for extreme-density environments: Disaster Relief, Refugee Camps, and Global Mega-Events.*
 
-🏆 **Winner of the Claude Impact Lab Hackathon 2026** 🏆
+<div align="center">
+  <img src="https://img.shields.io/badge/🏆_Claude_Impact_Lab-Hackathon_Winner-FF4B4B?style=for-the-badge" alt="Claude Impact Lab Winner" />
+</div>
+
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -14,17 +17,17 @@
 
 ---
 
-## 🌍 The Problem: 100 Million People
-The Nashik Kumbh Mela is the largest human gathering on Earth. When a child goes missing in a sea of millions, traditional police reporting is too slow, and standard facial recognition fails due to extreme occlusions, lack of connectivity, and severe privacy concerns.
+## 🌍 The Problem: Crisis at Scale
+Whether at a massive religious gathering, a sprawling refugee camp, or a post-disaster relief zone, managing missing persons in a sea of millions is a logistical nightmare. Traditional reporting is too slow, and standard facial recognition fails due to extreme occlusions, lack of connectivity, and severe privacy concerns for vulnerable populations.
 
 ## 💡 The Solution: KHOJ Edge Nodes
-KHOJ re-imagines crowd safety by deploying localized, interactive Edge Kiosks throughout the Mela grounds. 
+KHOJ is a free, white-label framework that re-imagines crowd safety by deploying localized, interactive Edge Kiosks. While our inaugural deployment target is the **Nashik Kumbh Mela 2027 (100M+ attendees)**, the architecture is designed to be deployed anywhere.
 
-Our Kiosks serve a dual purpose:
-1. **Interactive Triage:** A stress-free, lightning-fast Wizard UI for parents to report missing loved ones, or for lost children to seek immediate help.
-2. **Passive Vector Capture:** The Kiosk's camera continuously scans the passing crowd, extracting non-biometric, privacy-safe metadata (clothing colors, patterns) rather than storing facial geometry.
+Our Edge Nodes serve a dual purpose:
+1. **Interactive Triage:** A stress-free, lightning-fast Wizard UI designed for high-anxiety scenarios, allowing panicked individuals to report missing loved ones or seek immediate help.
+2. **Passive Vector Capture:** The node's camera continuously scans passing crowds, extracting non-biometric, privacy-safe metadata (clothing colors, patterns) rather than storing facial geometry.
 
-When a parent reports a child missing, KHOJ instantly cross-references the child's clothing vectors against our passive capture network, calculating Haversine distances to deploy police directly to the most probable chokepoint.
+When a report is filed, KHOJ instantly cross-references the missing person's metadata vectors against our decentralized capture network, calculating geospatial probabilities to deploy emergency services directly to the most likely chokepoint.
 
 ## ✨ Key Features
 
