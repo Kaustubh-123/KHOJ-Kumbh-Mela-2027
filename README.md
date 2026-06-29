@@ -4,14 +4,11 @@
 **Open-Source Edge-AI Crisis Triage & Decentralized Missing Persons Framework**
 *Built for extreme-density environments: Disaster Relief, Refugee Camps, and Global Mega-Events.*
 
-<div align="center">
-  <img src="https://img.shields.io/badge/🏆_Claude_Impact_Lab-Hackathon_Winner-FF4B4B?style=for-the-badge" alt="Claude Impact Lab Winner" />
-</div>
-
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
+[![Claude Impact Lab Winner](https://img.shields.io/badge/🏆_Claude_Impact_Lab-Hackathon_Winner-FF4B4B?style=flat-square)](https://anthropic.com)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)](https://reactjs.org/)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=flat-square&logo=framer)](https://www.framer.com/motion/)
 
 </div>
 
